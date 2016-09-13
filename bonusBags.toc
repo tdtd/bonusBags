@@ -1,0 +1,9 @@
+## Interface: 70300
+## Title: bonusBags
+## Notes: Scan for Bonus Bags
+## Author: tdtd
+## Version: 0.2
+
+embeds.xml
+
+main.lua
