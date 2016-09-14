@@ -18,10 +18,6 @@ local queueReady = '';
 
 --[[FUNCTIONS]]--
 function joinQueue()
-  print("Joining Queue ",best)
-  print(tankAvailable)
-  print(healAvailable)
-  print(dpsAvailable)
   SetLFGRoles(false, tankAvailable, healAvailable, dpsAvailable)
   SetLFGDungeon(1, best)
   JoinLFG(1)
@@ -35,7 +31,7 @@ function resetAvail()
 end
 
 function bonusBags:CheckForRewards()
-  
+  local best = GetRandomDungeonBestChoice();
   local eligible, forTank, forHealer, forDamage, itemCount, money, xp = GetLFGRoleShortageRewards(best, 1);
   local foundOne = false;
   resetAvail()
